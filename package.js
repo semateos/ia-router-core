@@ -10,7 +10,8 @@ Package.on_use(function (api, where) {
         'lib/NotMatchingError.js',
         'lib/RouteMatch.js',
         'lib/SimpleRouteList.js',
-        'lib/Routes/Regex.js'
+        'lib/Routes/Regex.js',
+        'lib/Routes/Literal.js'
     ], ['client', 'server']);
 });
 
@@ -21,6 +22,7 @@ Package.on_test(function (api) {
         'tests/NotMatchingErrorTest.js',
         'tests/RouteMatchTest.js',
         'tests/SimpleRouteListTest.js',
-        'tests/Routes/RegexTest.js'
+        'tests/Routes/RegexTest.js',
+        'tests/Routes/LiteralTest.js'
     ], ['client', 'server']);
 });
