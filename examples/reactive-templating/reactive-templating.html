@@ -1,0 +1,20 @@
+<head>
+  <title>reactive-templating</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+    <input class="foo" type="button" value="foo" />
+    <input class="bar" type="button" value="bar" />
+    <input class="404" type="button" value="404" />
+    <input class="missing" type="button" value="missing" />
+    {{template}}
+</template>
+
+<template name="foo-template"><h1>Foo-Template</h1></template>
+<template name="bar-template"><h1>Bar-Template</h1></template>
+<template name="404"><h1>404</h1></template>
+<template name="missing"><h1>Route matched but no template specified</h1></template>
