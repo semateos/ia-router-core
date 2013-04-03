@@ -43,4 +43,11 @@
             result = route.match('/matched');
         test.equal(result.getParam('template'), 'test');
     });
+
+    Tinytest.add('RegexRoute: can re-run regex with g-flag', function (test) {
+        var route = new RegexRoute(/(\/matched)/g),
+            firstResult = route.match('/matched'),
+            // this would throw an exception otherwise
+            secondResult = route.match('/matched');
+    });
 } (Tinytest, Router.Routes.Regex));
