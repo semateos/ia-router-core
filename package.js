@@ -11,7 +11,8 @@ Package.on_use(function (api, where) {
         'lib/RouteMatch.js',
         'lib/SimpleRouteList.js',
         'lib/Routes/Regex.js',
-        'lib/Routes/Literal.js'
+        'lib/Routes/Literal.js',
+        'lib/Routes/Segment.js'
     ], ['client', 'server']);
 });
 
@@ -23,6 +24,7 @@ Package.on_test(function (api) {
         'tests/RouteMatchTest.js',
         'tests/SimpleRouteListTest.js',
         'tests/Routes/RegexTest.js',
-        'tests/Routes/LiteralTest.js'
+        'tests/Routes/LiteralTest.js',
+        'tests/Routes/SegmentTest.js'
     ], ['client', 'server']);
 });
