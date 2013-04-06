@@ -12,35 +12,35 @@
         };
     };
 
-    Tinytest.add('ia-route-core - SimpleRouteList - returns routes of construction', function (test) {
+    Tinytest.add('ia-router-core - SimpleRouteList - returns routes of construction', function (test) {
         var routes = [new Route(false)],
             collection = new SimpleRouteList(routes);
         test.equal(routes, collection.getRoutes());
     });
 
-    Tinytest.add('ia-route-core - SimpleRouteList - no match on empty list', function (test) {
+    Tinytest.add('ia-router-core - SimpleRouteList - no match on empty list', function (test) {
         var collection = new SimpleRouteList([]);
         test.isFalse(collection.doesMatch('x'));
     });
 
-    Tinytest.add('ia-route-core - SimpleRouteList - doesMatch false on no matching routes', function (test) {
+    Tinytest.add('ia-router-core - SimpleRouteList - doesMatch false on no matching routes', function (test) {
         var collection = new SimpleRouteList([new Route(false)]);
         test.isFalse(collection.doesMatch('x'));
     });
 
-    Tinytest.add('ia-route-core - SimpleRouteList - doesMatch true on matching route', function (test) {
+    Tinytest.add('ia-router-core - SimpleRouteList - doesMatch true on matching route', function (test) {
         var collection = new SimpleRouteList([new Route(false), new Route(true)]);
         test.isTrue(collection.doesMatch('x'));
     });
 
-    Tinytest.add('ia-route-core - SimpleRouteList - match returns first matching route\'s RouteMatch', function (test) {
+    Tinytest.add('ia-router-core - SimpleRouteList - match returns first matching route\'s RouteMatch', function (test) {
         var notMatchingRoute = new Route(false),
             matchingRoute = new Route(true),
             collection = new SimpleRouteList([notMatchingRoute, matchingRoute]);
         test.equal({isMatching: true}, collection.match('x'));
     });
 
-    Tinytest.add('ia-route-core - SimpleRouteList - match throws exception on no matching route', function (test) {
+    Tinytest.add('ia-router-core - SimpleRouteList - match throws exception on no matching route', function (test) {
         var collection = new SimpleRouteList([]),
             exceptionCaught = false;
         try {

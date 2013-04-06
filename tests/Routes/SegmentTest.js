@@ -1,7 +1,7 @@
 (function (Tinytest, SegmentRoute) {
     "use strict";
 
-    Tinytest.add('ia-route-core - SegmentRoute - doesMatch variable', function (test) {
+    Tinytest.add('ia-router-core - SegmentRoute - doesMatch variable', function (test) {
         var route = new SegmentRoute(':variable');
         test.isTrue(route.doesMatch('test'));
     });
