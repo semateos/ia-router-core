@@ -50,4 +50,10 @@
             // this would throw an exception otherwise
             secondResult = route.match('/matched');
     });
+
+    Tinytest.add('ia-router-core - RegexRoute - match contains route', function (test) {
+        var route = new RegexRoute(/(\/matched)/g),
+            result = route.match('/matched');
+        test.equal(result.getRoute(), route);
+    });
 } (Tinytest, Router.Routes.Regex));

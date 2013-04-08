@@ -112,4 +112,11 @@
         var route = new SegmentRoute(':controller[/:action]', {action: 'indexAction'});
         test.equal(route.match('testController').getParams(), {controller: 'testController', action: 'indexAction'});
     });
+
+    Tinytest.add('ia-router-core - SegmentRoute - match contains route', function (test) {
+        var route = new SegmentRoute(':action'),
+            result = route.match('matched');
+        test.equal(result.getRoute(), route);
+    });
+
 } (Tinytest, Router.Routes.Segment));

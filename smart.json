@@ -1,9 +1,9 @@
 {
     "name": "ia-router-core",
-    "description": "A reactive router library",
+    "description": "Package providing routes and route-sets for matching",
     "homepage": "https://github.com/InnoAccel/ia-router-core",
     "author": "Fritz Gerneth <fgerneth@effms.de>",
-    "version": "0.3.4",
+    "version": "0.4",
     "git": "https://github.com/InnoAccel/ia-router-core.git",
     "packages": {
     }

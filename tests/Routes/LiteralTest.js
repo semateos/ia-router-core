@@ -32,4 +32,10 @@
             result = route.match('test');
         test.equal(result.getParam('template'), 'test');
     });
+
+    Tinytest.add('ia-router-core - LiteralRoute - match contains route', function (test) {
+        var route = new LiteralRoute('test'),
+            result = route.match('test');
+        test.equal(result.getRoute(), route);
+    });
 } (Tinytest, Router.Routes.Literal));

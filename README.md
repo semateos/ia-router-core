@@ -104,6 +104,11 @@ fallbacks *{mixed}* - Default values to return
 **Return**
 *{mixed[]}* - Key-Value pairs
 
+### getRoute()
+Get the route that produced this route match
+**Return**
+*{Route object}* - The route 
+
 ## NotMatchingError
 This error is thrown if a route is asked to match but is actually not matching.
 

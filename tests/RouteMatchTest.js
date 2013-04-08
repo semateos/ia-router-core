@@ -37,4 +37,10 @@
         var routeMatch = new RouteMatch({key1: 'v1'});
         test.equal({key1: 'v1', key2: 'v2'}, routeMatch.getParams({key2: 'v2'}));
     });
+
+    Tinytest.add('ia-router-core - RouteMatch - get route of constructor', function (test) {
+        var route = {},
+            routeMatch = new RouteMatch({}, route);
+        test.equal(routeMatch.getRoute(), route);
+    });
 } (Tinytest, Router.RouteMatch));
