@@ -5,6 +5,8 @@ This package provides a a set of routes for the Meteor Framework.
 A router matches a string, typically the URL, and returns a set of `matches` (MatchResult) that can be used to determine the further execution flow.
 
 There is no single router in this package. Every route is a router itself. Routes can be combined for a more complex route(r).
+
+The routes are not reactive by itself. Do make them reactive use the package [ia-router-reactive](https://github.com/InnoAccel/ia-router-reactive).
 # API
 ## Routes
 Every route defines two methods: `doesMatch` and `match`. All routes do match the complete string.
@@ -107,7 +109,7 @@ fallbacks *{mixed}* - Default values to return
 ### getRoute()
 Get the route that produced this route match
 **Return**
-*{Route object}* - The route 
+*{Route object}* - The route
 
 ## NotMatchingError
 This error is thrown if a route is asked to match but is actually not matching.

@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-    api.use(['underscore', 'deps'], 'client');
+    api.use('underscore', ['client', 'server']);
 
     api.add_files([
         'lib/namespace.js',
@@ -17,7 +17,7 @@ Package.on_use(function (api, where) {
 });
 
 Package.on_test(function (api) {
-    api.use(['ia-router-core', 'underscore', 'deps', 'tinytest']);
+    api.use(['ia-router-core', 'tinytest'], ['client', 'server']);
 
     api.add_files([
         'tests/NotMatchingErrorTest.js',
