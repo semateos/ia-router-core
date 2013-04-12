@@ -76,4 +76,4 @@
         });
         collection.doesMatch();
     });
-} (Tinytest, Router.SimpleRouteList));
+} (Tinytest, InnoAccel.Router.SimpleRouteList));

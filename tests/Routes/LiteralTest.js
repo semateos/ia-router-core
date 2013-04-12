@@ -38,4 +38,4 @@
             result = route.match('test');
         test.equal(result.getRoute(), route);
     });
-} (Tinytest, Router.Routes.Literal));
+} (Tinytest, InnoAccel.Router.Literal));

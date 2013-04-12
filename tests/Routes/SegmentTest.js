@@ -119,4 +119,4 @@
         test.equal(result.getRoute(), route);
     });
 
-} (Tinytest, Router.Routes.Segment));
+} (Tinytest, InnoAccel.Router.Segment));

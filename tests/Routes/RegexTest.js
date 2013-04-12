@@ -56,4 +56,4 @@
             result = route.match('/matched');
         test.equal(result.getRoute(), route);
     });
-} (Tinytest, Router.Routes.Regex));
+} (Tinytest, InnoAccel.Router.Regex));

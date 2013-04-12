@@ -38,10 +38,10 @@ url *{String}* -The url to match
 There are four types of routes available. They all share the API specified above
 ### Literal
 The route matches only if the target matches the literal exactly. Internally the  literal is converted into the regular expression `^(literal)$`.
-Usage: `new Router.Routes.Literal('/foo');`
+Usage: `new InnoAccel.Router.Literal('/foo');`
 ### Regex
 Route matching a regular expression. Throws an Error if route is not a RegExp.
-Usage: `new Router.Routes.Regex(/([\w]+)/);`
+Usage: `new InnoAccel.Router.Regex(/([\w]+)/);`
 The RouteMatch contains the matched values as numbers. I.e. the first match is stored as key '0';
 ### Segment
 Route matching a segmented string. You can specify variables and optional components.
@@ -66,7 +66,7 @@ Chaining and stacking
     - 'content/var2/literal'
     - 'content/var2/var3/literal'
 
-Usage: `new Router.Routes.Segment(':variable[/:optional]');`
+Usage: `new InnoAccel.Router.Segment(':variable[/:optional]');`
 
 ### SimpleRouteList
 All previous routes could only match one route. The `SimpleRouteList` doesn't do any matching itself but takes a set of routes and matches all of them.
@@ -76,8 +76,8 @@ If multiple routes would match, the first one is selected. This route does not t
 Usage:
 ```
 new Router.SimpleRouteList([
-    new Router.Routes.Literal('/foo'),
-    new Router.Routes.Literal('/bar')
+    new InnoAccel.Router.Literal('/foo'),
+    new InnoAccel.Router.Literal('/bar')
 ]);
 ```
 

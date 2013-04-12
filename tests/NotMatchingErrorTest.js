@@ -21,4 +21,4 @@
             error = new NotMatchingError(route, url);
         test.equal(error.message, 'Route is not matching notMatchingURL');
     });
-} (Tinytest, Router.NotMatchingError));
+} (Tinytest, InnoAccel.Router.NotMatchingError));

@@ -43,4 +43,4 @@
             routeMatch = new RouteMatch({}, route);
         test.equal(routeMatch.getRoute(), route);
     });
-} (Tinytest, Router.RouteMatch));
+} (Tinytest, InnoAccel.Router.RouteMatch));
