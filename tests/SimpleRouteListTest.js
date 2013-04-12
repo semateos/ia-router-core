@@ -50,4 +50,30 @@
         }
         test.isTrue(exceptionCaught);
     });
+
+    Tinytest.add('ia-router-core - SimpleRouteList - can add routes', function (test) {
+        var collection = new SimpleRouteList([]),
+            invoked = false;
+
+        collection.addRoute({
+            doesMatch: function () { invoked = true; },
+            match: function (match) { }
+        });
+        collection.doesMatch();
+        test.isTrue(invoked);
+    });
+
+    Tinytest.add('ia-router-core - SimpleRouteList - added at the end of the list', function (test) {
+        var collection = new SimpleRouteList([{
+                doesMatch: function () { invokedCount++; return false; },
+                match: function () { }
+            }]),
+            invokedCount = 0;
+
+        collection.addRoute({
+            doesMatch: function () { test.equal(invokedCount, 1); },
+            match: function () { }
+        });
+        collection.doesMatch();
+    });
 } (Tinytest, Router.SimpleRouteList));
