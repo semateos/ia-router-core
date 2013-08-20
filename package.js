@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-    api.use('underscore', ['client', 'server']);
+    api.use(['ia', 'underscore'], ['client', 'server']);
 
     api.add_files([
         'lib/namespace.js',
@@ -14,8 +14,6 @@ Package.on_use(function (api, where) {
         'lib/Routes/Literal.js',
         'lib/Routes/Segment.js'
     ], ['client', 'server']);
-
-    api.export("InnoAccel");
 });
 
 Package.on_test(function (api) {
